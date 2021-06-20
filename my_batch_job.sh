@@ -13,7 +13,7 @@
 #SBATCH --time=24:00:00
  
 export REPO=/sdf/group/lsst/camera/IandT/repo_gen3/spot_test_v2
-export output=u/youtsumi/run_12781/bf_work_v3
+export output=u/youtsumi/run_12781/bf_work_v4
 export yamldir=/sdf/group/lsst/camera/IandT/repo_gen3/spot_test_v2/u/youtsumi/work
 export superdark=u/youtsumi/calib/dark/run_12781
 export superbias=u/jchiang/calib/bias/run_12781/20210525T184949Z 
