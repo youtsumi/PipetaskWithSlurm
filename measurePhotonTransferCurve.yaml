@@ -37,6 +37,8 @@ tasks:
     config:
       connections.inputCovariances: parameters.measuredCovariances
       connections.outputPtcDataset: ptc
-      ptcFitType: FULLCOVARIANCE
+#      ptcFitType: FULLCOVARIANCE
+      ptcFitType: POLYNOMIAL
+      polynomialFitDegree: 3
 contracts:
   - ptcSolve.maximumRangeCovariancesAstier == ptcExtract.maximumRangeCovariancesAstier
