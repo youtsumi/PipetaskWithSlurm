@@ -4,7 +4,7 @@ tasks:
     class: lsst.cp.pipe.BrighterFatterKernelSolveTask
     config:
       forceZeroSum: true
-      corrlelationModelRadius: 3
+      correlationModelRadius: 3
       connections.inputPtc: ptc
       connections.outputBFK: bfk
 

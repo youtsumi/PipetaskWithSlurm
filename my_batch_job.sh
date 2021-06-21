@@ -13,7 +13,7 @@
 #SBATCH --time=24:00:00
  
 export REPO=/sdf/group/lsst/camera/IandT/repo_gen3/spot_test_v2
-export output=u/youtsumi/run_12781/bf_work_v4
+export output=u/youtsumi/run_12781/bf_work_v5
 export yamldir=/sdf/group/lsst/camera/IandT/repo_gen3/spot_test_v2/u/youtsumi/work
 export superdark=u/youtsumi/calib/dark/run_12781
 export superbias=u/jchiang/calib/bias/run_12781/20210525T184949Z 
@@ -31,6 +31,7 @@ srun pipetask run  \
 	-i LSSTCam/raw/all,LSSTCam/calib,${superbias},${superdark},${superflat},${defects} \
 	-o ${output}/ptcs \
 	-p ${yamldir}/measurePhotonTransferCurve.yaml \
+        -c ptcSolve:ptcFitType=EXPAPPROXIMATION \
 	--register-dataset-types \
 
 # Generate BF Kernels
